@@ -3,19 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Medicine Tracker</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="disclaimer" id="disclaimer">
-        Disclaimer: All medicine names and prices used in this application are fictional and do not represent any real medicine(s).
-    </div>
-    <header>
-        <h1>Medicine Tracker</h1>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-red-600 text-white py-6 shadow-md">
+        <h1 class="text-center text-4xl font-bold">Medicine Tracker</h1>
     </header>
-    <main>
+ 
+    <main class="max-w-4xl mx-auto mt-10">
+        <!-- Search Bar -->
+        <section class="bg-white shadow-lg rounded-lg p-4 mb-6">
+            <h2 class="text-2xl font-bold mb-4 text-red-600">Search Medicines</h2>
+            <input 
+                type="text" 
+                id="search-bar" 
+                placeholder="Search by medicine name..." 
+                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-red-600 focus:border-red-600"
+            >
+        </section>
 
+        <!-- No Medicines Found Message -->
+        <section id="no-medicines-message" class="bg-white shadow-lg rounded-lg p-4 mb-6 hidden">
+            <p class="text-center text-red-600 font-bold">No Medicines Found</p>
+        </section>
+
+        <!-- Medicine List Section (Table and Card Layouts) -->
+        <section class="bg-white shadow-lg rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-red-600">All Medicines</h2>
+
+            <!-- Table Layout (Hidden by Default) -->
+            <div id="medicine-table" class="hidden">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="border-b p-4">Medicine Name</th>
+                            <th class="border-b p-4">Price</th>
+                            <th class="border-b p-4">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="medicine-list"></tbody>
+                </table>
+            </div>
+
+            <!-- Card Layout (Visible by Default) -->
+            <div id="medicine-cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Add Medicine Form -->
+        <section class="bg-white shadow-lg rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4 text-red-600">Add a New Medicine</h2>
+            <form id="add-medicine-form" class="space-y-4">
+                <div>
+                    <label for="medicine-name" class="block font-medium">Medicine Name</label>
+                    <input type="text" id="medicine-name" placeholder="Enter medicine name"
+                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-red-600 focus:border-red-600" required>
+                </div>
+                <div>
+                    <label for="medicine-price" class="block font-medium">Price</label>
+                    <input type="number" id="medicine-price" placeholder="Enter price"
+                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-red-600 focus:border-red-600" required>
+                </div>
+                <button type="submit"
+                    class="w-full bg-red-600 text-white font-semibold py-2 rounded-lg hover:bg-red-700 transition">
+                    Add Medicine
+                </button>
+            </form>
+        </section>
     </main>
+
+    <!-- Floating Sidebar for Average Price (Smaller and Non-overlapping) -->
+    <aside class="fixed top-0 right-0 mt-20 mr-4 bg-white shadow-lg p-4 rounded-lg w-56 z-10">
+        <h2 class="text-xl font-bold text-red-600 mb-2">Average Price</h2>
+        <div id="average-price" class="text-lg font-bold text-gray-700"></div>
+    </aside>
+
     <script src="script.js"></script>
-</body>
-</html>
+</
