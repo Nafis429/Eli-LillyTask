@@ -46,9 +46,15 @@ Open the index.html file in your browser to view the frontend.
 
 ## Future Improvements
 User Authentication: Implement authentication to allow users to manage their own medicines securely.
+
 Persistent Database: Replace the current JSON file with a real database (like PostgreSQL or MongoDB) for better scalability and data persistence.
+
 Advanced Search: Enhance the search functionality by adding filtering and sorting options (e.g., by price range or category).
+
 Dark Mode: Implement a dark mode toggle for a better user experience, especially for those who prefer dark themes.
+
 React Frontend: Refactor the frontend using React to improve maintainability, scalability, and performance.
+
 Pagination/Infinite Scroll: Add pagination or infinite scrolling for handling large datasets efficiently.
+
 Analytics Dashboard: Implement an analytics dashboard to visualize price trends, distribution, and more.
