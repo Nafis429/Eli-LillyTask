@@ -9,7 +9,7 @@ The Eli Lilly Medicine Tracker is a full-stack web application that allows users
 - **Backend**: FastAPI (Python)
 - **Frontend**: HTML, CSS (Tailwind CSS), JavaScript
 - **Database**: JSON file (`data.json`), but can be replaced with a real database
-- **Tools**: Git, GitHub
+- **Tools**: Git, GitHub, VSCode
 
 ## Features
 
@@ -45,8 +45,10 @@ python3 -m uvicorn main:app --reload
 Open the index.html file in your browser to view the frontend.
 
 ## Future Improvements
-User Authentication: Add authentication to allow users to manage their own medicines.
-Persistent Database: Replace the JSON file with a real database like PostgreSQL or MongoDB.
-Advanced Search: Implement more advanced filtering and sorting options for medicines.
-Dark Mode: Implement a dark mode for better user experience.
-React: Refactor the frontend with React for better maintainability, performance, and scalability.
+User Authentication: Implement authentication to allow users to manage their own medicines securely.
+Persistent Database: Replace the current JSON file with a real database (like PostgreSQL or MongoDB) for better scalability and data persistence.
+Advanced Search: Enhance the search functionality by adding filtering and sorting options (e.g., by price range or category).
+Dark Mode: Implement a dark mode toggle for a better user experience, especially for those who prefer dark themes.
+React Frontend: Refactor the frontend using React to improve maintainability, scalability, and performance.
+Pagination/Infinite Scroll: Add pagination or infinite scrolling for handling large datasets efficiently.
+Analytics Dashboard: Implement an analytics dashboard to visualize price trends, distribution, and more.
